@@ -33,7 +33,7 @@ func (i *Image) Cleanup() error {
 	return i.Client.DeleteImage(i.Project, i.Name)
 }
 
-// CreateImageObject creates an image object to be operated by API client
+// CreateImageObject creates an image object to be operated by API client.
 func CreateImageObject(ctx context.Context, project string, name string) (*Image, error) {
 	client, err := daisyCompute.NewClient(ctx)
 	if err != nil {
